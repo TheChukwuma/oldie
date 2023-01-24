@@ -11,19 +11,14 @@ import java.util.Set;
 @NoArgsConstructor
 @Table(name = "roles")
 @Entity
-public class Role {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "name",unique = true,nullable = false)
-    private Long id;
+public class Role extends BaseEntity {
     private String name;
 
 
     @Override
     public String toString() {
         return "Role{" +
-                "id='" + id + '\'' +
+                "id='" + getId() + '\'' +
                 ", name='" + name + '\'' +
                 '}';
     }
