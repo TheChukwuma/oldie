@@ -8,10 +8,12 @@ import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
 
+@Builder
 @Getter
 @Setter
 @ToString
-@RequiredArgsConstructor
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
 @Table(name = "users")
 public class User extends BaseEntity {
@@ -21,6 +23,7 @@ public class User extends BaseEntity {
     private String email;
     private String password;
     private String phoneNo;
+    private boolean isVerified;
     @OneToOne(cascade = CascadeType.ALL)
     private Address address;
     @ManyToMany

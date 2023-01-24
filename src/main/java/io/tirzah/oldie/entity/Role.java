@@ -14,6 +14,10 @@ import java.util.Set;
 public class Role extends BaseEntity {
     private String name;
 
+    public Role(String roleUser) {
+        this.name = roleUser;
+    }
+
 
     @Override
     public String toString() {
